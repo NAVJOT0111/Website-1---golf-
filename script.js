@@ -1,4 +1,17 @@
-document.addEventListener()
+var crsr = document.querySelector("#cursor")
+var blurC = document.querySelector("#cursor-blur")
+
+document.addEventListener("mousemove", function(dets){
+    crsr.style.left = dets.x + "px";
+    crsr.style.top = dets.y + "px";
+
+    blurC.style.left = dets.x - 250  + "px";
+    blurC.style.top = dets.y - 250 + "px";
+    // dets is used for mouse veents
+    // minus 250(length/width da half) isli kita taki cursor de nal aje circle nahi ta oh div te upperleft corner de naal rehnda si te circle lag karda si
+})
+
+
 
 gsap.to("#nav", {
     backgroundColor: "#000",
