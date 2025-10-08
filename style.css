@@ -9,6 +9,7 @@
 html, body{
     height: 100%;
     width: 100%;
+    perspective: 800px;
 }
 
 #cursor{
@@ -194,4 +195,68 @@ video{
 #about-us-in p{
     font-size:20px;
     line-height: 26px;
+}
+
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover ;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6;
+}
+
+#card1{
+    background-image: url("https://raw.githubusercontent.com/saarthack/sidcup-family-golf/refs/heads/main/Assests/card1.avif");
+}
+#card2{
+    background-image: url("https://github.com/saarthack/sidcup-family-golf/blob/main/Assests/card2.webp?raw=true");
+}
+#card3{
+    background-image: url("https://raw.githubusercontent.com/saarthack/sidcup-family-golf/refs/heads/main/Assests/card3.avif");
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap ;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 18px;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
 }
